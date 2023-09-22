@@ -27,13 +27,14 @@ class _CalculatorState extends State<Calculator> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              flex: 3,
-              child: Container(
-                color: backgroundGreyDark,
-                child: SafeArea(
+        backgroundColor: backgroundGreyDark,
+        body: SafeArea(
+          child: Column(
+            children: [
+              Expanded(
+                flex: 3,
+                child: Container(
+                  color: backgroundGreyDark,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -67,24 +68,24 @@ class _CalculatorState extends State<Calculator> {
                   ),
                 ),
               ),
-            ),
-            Expanded(
-              flex: 7,
-              child: Container(
-                color: backgroundGrey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    _getRow('AC', 'CE', '%', '/'),
-                    _getRow('7', '8', '9', '*'),
-                    _getRow('4', '5', '6', '-'),
-                    _getRow('1', '2', '3', '+'),
-                    _getRow('00', '0', '.', '='),
-                  ],
+              Expanded(
+                flex: 7,
+                child: Container(
+                  color: backgroundGrey,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _getRow('AC', 'CE', '%', '/'),
+                      _getRow('7', '8', '9', '*'),
+                      _getRow('4', '5', '6', '-'),
+                      _getRow('1', '2', '3', '+'),
+                      _getRow('00', '0', '.', '='),
+                    ],
+                  ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -113,7 +114,7 @@ class _CalculatorState extends State<Calculator> {
           ),
           child: Text(
             text1,
-            style: TextStyle(fontSize: 26, color: _getButtonTextColor(text1)),
+            style: TextStyle(fontSize: 28, color: _getButtonTextColor(text1)),
           ),
         ),
         TextButton(
@@ -136,7 +137,7 @@ class _CalculatorState extends State<Calculator> {
           ),
           child: Text(
             text2,
-            style: TextStyle(fontSize: 26, color: _getButtonTextColor(text2)),
+            style: TextStyle(fontSize: 28, color: _getButtonTextColor(text2)),
           ),
         ),
         TextButton(
@@ -151,7 +152,7 @@ class _CalculatorState extends State<Calculator> {
           ),
           child: Text(
             text3,
-            style: TextStyle(fontSize: 26, color: _getButtonTextColor(text3)),
+            style: TextStyle(fontSize: 28, color: _getButtonTextColor(text3)),
           ),
         ),
         TextButton(
@@ -177,7 +178,7 @@ class _CalculatorState extends State<Calculator> {
           ),
           child: Text(
             text4,
-            style: TextStyle(fontSize: 26, color: _getButtonTextColor(text4)),
+            style: TextStyle(fontSize: 35, color: _getButtonTextColor(text4)),
           ),
         ),
       ],
